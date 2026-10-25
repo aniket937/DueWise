@@ -1,0 +1,30 @@
+{
+  "name": "duewise",
+  "version": "1.0.0",
+  "description": "Upload once. Know what to do next. Autonomous academic planning using open-weight AI.",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev": "node scripts/dev.js",
+    "build": "npm --prefix frontend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "backend\\.venv\\Scripts\\ruff.exe check backend/app",
+    "lint:frontend": "npm --prefix frontend run lint",
+    "typecheck": "npm --prefix frontend run typecheck",
+    "test": "npm run test:backend && npm run typecheck",
+    "test:backend": "backend\\.venv\\Scripts\\pytest.exe backend -v"
+  },
+  "keywords": [
+    "devchallenge",
+    "hf26challenge",
+    "academic-planner",
+    "open-weight-ai",
+    "openrouter",
+    "fastapi",
+    "nextjs",
+    "sqlite"
+  ],
+  "author": "Aniket",
+  "license": "MIT"
+}
